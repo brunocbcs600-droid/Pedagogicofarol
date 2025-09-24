@@ -24,7 +24,7 @@ def login_widget():
         if st.sidebar.button("Entrar"):
             if username == "admin" and password == "admin":
                 st.session_state.logged_in = True
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.sidebar.error("Credenciais inválidas — use `admin`/`admin` como teste.")
         st.sidebar.markdown("---")
